@@ -5,14 +5,20 @@ const FeaturesCard = (props) => {
   return (
     <>
       <Box
-        sx={{ display: "flex", alignItems: "center", gap: 3, width: "100%", p: 3 }}
+        sx={{
+          display: "flex",
+          alignItems: {xs: "flex-start", md: "center"},
+          gap: 1,
+          width: "100%",
+          p: {xs: 0, md: 1}
+        }}
       >
         <Box
           sx={{
             bgcolor: "rgba(14, 58, 138, 0.1)",
             borderRadius: "50%",
-            width: "80px",
-            height: "80px",
+            width: { xs: "50px", md: "80px" },
+            height: { xs: "50px", md: "80px" },
             color: "primary.main",
             display: "flex",
             justifyContent: "center",
@@ -21,16 +27,33 @@ const FeaturesCard = (props) => {
         >
           {props.icon}
         </Box>
-        <Box sx={{flex: 1}}>
+        <Box
+          sx={{
+            flex: 1,
+            p: {xs: 1, md: 2},
+            borderRight: {xs: "none", lg: props.border === "active" ? "2px solid #E5E7EB" : "none"},
+            borderColor: "border.main",
+          }}
+        >
           <Typography
             variant="body1"
-            sx={{ color: "text.primary", fontSize: "16px", fontWeight: 600 }}
+            sx={{
+              color: "text.primary",
+              fontSize: { xs: "12px", md: "16px" },
+              fontWeight: 600,
+            }}
           >
             {props.title}
           </Typography>
           <Typography
             variant="body1"
-            sx={{ color: "text.secondary", fontSize: "14px", mt: 1 }}
+            sx={{
+              color: "text.secondary",
+              fontSize: { xs: "9px", md: "14px" },
+              mt: 1,
+              fontWeight: 500,
+              lineHeight: 1.5,
+            }}
           >
             {props.sub}
           </Typography>

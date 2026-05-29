@@ -13,9 +13,18 @@ const Hero = () => {
           height: "100%",
           display: "flex",
           alignItems: "center",
+          flexDirection: { xs: "column", md: "row" },
+          overflow: "hidden",
         }}
       >
-        <Box sx={{ flex: 1, pl: 10, pr: 4 }}>
+        <Box
+          sx={{
+            flex: 1,
+            pl: { xs: 3, lg: 10 },
+            pr: { xs: 3, lg: 4 },
+            py: { xs: 3, lg: 0 },
+          }}
+        >
           <Typography
             variant="body1"
             sx={{
@@ -27,41 +36,59 @@ const Hero = () => {
           >
             ARC DENTAL . MODERN DENTAL CLINIC
           </Typography>
-          <Typography
-            variant="h1"
-            sx={{
-              fontWeight: 500,
-              fontSize: "60px",
-              mt: 3,
-              color: "text.main",
-            }}
-          >
-            Healthy Smiles,
-            <br />
-            Modern Treatments
+          <Box sx={{ mt: 3 }}>
             <Typography
               variant="h1"
               sx={{
                 fontWeight: 500,
-                fontSize: "60px",
+                fontSize: { xs: "43px", lg: "60px" },
+                color: "text.main",
+                display: "inline",
+              }}
+            >
+              Healthy Smiles,<br/>Modern Treatments
+            </Typography>
+            <Typography
+              variant="h1"
+              sx={{
+                fontWeight: 500,
+                fontSize: { xs: "43px", lg: "60px" },
                 color: "primary.main",
                 display: "inline",
               }}
             >
               .
             </Typography>
-          </Typography>
-          <Typography variant="body1" sx={{ mt: 3, color: "text.secondary" }}>
+          </Box>
+          <Typography
+            variant="body1"
+            sx={{
+              mt: 3,
+              color: "text.secondary",
+              fontSize: 14,
+              fontWeight: 500,
+            }}
+          >
             With the latest technical equipments and expert dentists,
-            <br />
+            <Box sx={{ display: { xs: "none", md: "inline" } }}>
+              <br />
+            </Box>
             We offer trust worthy treatments for mouth and teeth.
           </Typography>
-          <Box sx={{ display: "flex", alignItems: "center", gap: 3, mt: 3 }}>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: { xs: "flex-start", md: "center" },
+              gap: { xs: 2, md: 3 },
+              mt: 3,
+              flexDirection: { xs: "column", md: "row" },
+            }}
+          >
             <Button
               variant="contained"
               sx={{
                 height: "50px",
-                width: "150px",
+                width: { xs: "200px", lg: "150px" },
                 bgcolor: "primary.main",
                 color: "background.default",
                 fontSize: 14,
@@ -103,8 +130,10 @@ const Hero = () => {
               width: "100%",
               height: "100%",
 
-              background:
-                "linear-gradient(to right, rgba(248,250,252,1) 0%, rgba(248,250,252,0) 30%)",
+              background: {
+                xs: "linear-gradient(to bottom, rgba(248,250,252,1) 0%, rgba(248,250,252,0) 50%)",
+                md: "linear-gradient(to right, rgba(248,250,252,1) 0%, rgba(248,250,252,0) 50%)",
+              },
 
               zIndex: 1,
             },

@@ -1,7 +1,7 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, IconButton, Typography } from "@mui/material";
 import React from "react";
-import logo from "../assets/logo.png";
-import { CalendarMonthOutlined } from "@mui/icons-material";
+import logo from "../assets/logo2.png";
+import { CalendarMonthOutlined, Menu } from "@mui/icons-material";
 
 const Nav = (props) => {
   return (
@@ -18,19 +18,25 @@ const Nav = (props) => {
           alignItems: "center",
           justifyContent: "space-between",
           zIndex: 999,
-          p: 5,
+          px: { xs: 2, md: 5 },
+          py: 5
         }}
       >
         <Box>
-          {/* <Box component="img" src={logo} alt="Logo" sx={{ height: "200px" }} /> */}
-          <Typography
+          <Box
+            component="img"
+            src={logo}
+            alt="Logo"
+            sx={{ height: { xs: "40px", md: "50px" } }}
+          />
+          {/* <Typography
             variant="h5"
             sx={{ color: "primary.main", fontWeight: 600, fontSize: "35px" }}
           >
             Arc Dental
-          </Typography>
+          </Typography> */}
         </Box>
-        <Box sx={{ display: "flex", gap: 4 }}>
+        <Box sx={{ display: { xs: "none", md: "flex" }, gap: 4 }}>
           <Typography
             variant="body1"
             sx={{
@@ -45,8 +51,8 @@ const Nav = (props) => {
                 bgcolor: "primary.main",
                 position: "absolute",
                 left: 0,
-                bottom: "-10px"
-              }
+                bottom: "-10px",
+              },
             }}
           >
             Home
@@ -78,20 +84,33 @@ const Nav = (props) => {
             Contact
           </Typography>
         </Box>
-        <Box>
+        <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
           <Button
             variant="contained"
             sx={{
-              height: "50px",
-              width: "150px",
+              height: "40px",
+              width: { xs: "130px", md: "150px" },
               bgcolor: "primary.main",
               color: "background.paper",
-              fontSize: "14px",
+              fontSize: "12px",
             }}
-            startIcon={<CalendarMonthOutlined />}
+            startIcon={<CalendarMonthOutlined fontSize="small" />}
           >
-            Appointment
+            Book Now
           </Button>
+          <IconButton
+            sx={{
+              display: {
+                xs: "flex",
+                md: "none",
+                color: "text.primary",
+                justifyContent: "center",
+                alignItems: "center",
+              },
+            }}
+          >
+            <Menu sx={{color: "text.primary"}}></Menu>
+          </IconButton>
         </Box>
       </Box>
     </>

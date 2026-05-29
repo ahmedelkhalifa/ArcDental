@@ -1,40 +1,43 @@
 import React from "react";
 import { Box, Grid, Paper } from "@mui/material";
 import FeaturesCard from "./FeaturesCard";
-import { Medication } from "@mui/icons-material";
+import { Computer, GradeOutlined, Medication, VerifiedUserOutlined } from "@mui/icons-material";
 
 const FeaturesPaper = () => {
   return (
     <>
-      <Box sx={{ px: 10, position: "relative", top: "-25%", zIndex: 100 }}>
+      <Box sx={{ px: {xs: 3, md: 10}, position: "relative", top: "-5vh", zIndex: 100 }}>
         <Paper sx={{ width: "100%", p: 2, borderRadius: 3 }} elevation={5}>
           <Grid container>
-            <Grid size={{ xs: 6, md: 3 }} sx={{borderRight: "1px solid", borderColor: "border.main"}}>
+            <Grid size={{ xs: 12, lg: 3 }}>
               <FeaturesCard
-                icon={<Medication fontSize="large" />}
+                icon={<Medication sx={{fontSize: {xs: "24px", md: "36px"}}} />}
                 title="Expert Dentists"
                 sub="Expert and certified professional team"
+                border="active"
               />
             </Grid>
-            <Grid size={{ xs: 6, md: 3 }} sx={{borderRight: "1px solid", borderColor: "border.main"}}>
+            <Grid size={{ xs: 12, lg: 3 }}>
               <FeaturesCard
-                icon={<Medication fontSize="large" />}
-                title="Expert Dentists"
-                sub="Expert and certified professional team"
+                icon={<Computer sx={{fontSize: {xs: "24px", md: "36px"}}} />}
+                title="Digital Technology"
+                sub="Comfortable treatments with the latest technology"
+                border="active"
               />
             </Grid>
-            <Grid size={{ xs: 6, md: 3 }} sx={{borderRight: "1px solid", borderColor: "border.main"}}>
+            <Grid size={{ xs: 12, lg: 3 }}>
               <FeaturesCard
-                icon={<Medication fontSize="large" />}
-                title="Expert Dentists"
-                sub="Expert and certified professional team"
+                icon={<VerifiedUserOutlined sx={{fontSize: {xs: "24px", md: "36px"}}} />}
+                title="sterile Environment"
+                sub="International standards in hygen and security"
+                border="active"
               />
             </Grid>
-            <Grid size={{ xs: 6, md: 3 }}>
+            <Grid size={{ xs: 12, lg: 3 }}>
               <FeaturesCard
-                icon={<Medication fontSize="large" />}
-                title="Expert Dentists"
-                sub="Expert and certified professional team"
+                icon={<GradeOutlined sx={{fontSize: {xs: "24px", md: "36px"}}} />}
+                title="Patient Satisfaction"
+                sub="Your satisfaction is our priority"
               />
             </Grid>
           </Grid>
