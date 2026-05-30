@@ -1,10 +1,9 @@
 import { Box, Button } from "@mui/material";
 import React from "react";
 import { Typography } from "@mui/material";
-import img from "../assets/heroImg.png";
-import { CalendarMonthOutlined, East } from "@mui/icons-material";
+import { CalendarMonthOutlined, East, Phone } from "@mui/icons-material";
 
-const Hero = () => {
+const Hero = (props) => {
   return (
     <>
       <Box
@@ -13,7 +12,7 @@ const Hero = () => {
           height: "100%",
           display: "flex",
           alignItems: "center",
-          flexDirection: { xs: "column", md: "row" },
+          flexDirection: { xs: "column", lg: "row" },
           overflow: "hidden",
         }}
       >
@@ -34,25 +33,25 @@ const Hero = () => {
               letterSpacing: "2px",
             }}
           >
-            ARC DENTAL . MODERN DENTAL CLINIC
+            {props.top}
           </Typography>
           <Box sx={{ mt: 3 }}>
             <Typography
               variant="h1"
               sx={{
                 fontWeight: 500,
-                fontSize: { xs: "43px", lg: "60px" },
+                fontSize: { xs: "40px", lg: "60px" },
                 color: "text.main",
                 display: "inline",
               }}
             >
-              Healthy Smiles,<br/>Modern Treatments
+              {props.text}
             </Typography>
             <Typography
               variant="h1"
               sx={{
                 fontWeight: 500,
-                fontSize: { xs: "43px", lg: "60px" },
+                fontSize: { xs: "40px", lg: "60px" },
                 color: "primary.main",
                 display: "inline",
               }}
@@ -69,11 +68,11 @@ const Hero = () => {
               fontWeight: 500,
             }}
           >
-            With the latest technical equipments and expert dentists,
+            {props.sub1}
             <Box sx={{ display: { xs: "none", md: "inline" } }}>
               <br />
             </Box>
-            We offer trust worthy treatments for mouth and teeth.
+            {props.sub2}
           </Typography>
           <Box
             sx={{
@@ -108,9 +107,9 @@ const Hero = () => {
                 fontSize: 14,
                 fontWeight: 500,
               }}
-              startIcon={<East />}
+              startIcon={<Phone />}
             >
-              Our Services
+              Contact Us
             </Button>
           </Box>
         </Box>
@@ -132,7 +131,7 @@ const Hero = () => {
 
               background: {
                 xs: "linear-gradient(to bottom, rgba(248,250,252,1) 0%, rgba(248,250,252,0) 50%)",
-                md: "linear-gradient(to right, rgba(248,250,252,1) 0%, rgba(248,250,252,0) 50%)",
+                lg: "linear-gradient(to right, rgba(248,250,252,1) 0%, rgba(248,250,252,0) 50%)",
               },
 
               zIndex: 1,
@@ -141,7 +140,7 @@ const Hero = () => {
         >
           <Box
             component={"img"}
-            src={img}
+            src={props.img}
             sx={{
               width: "100%",
               height: "100%",

@@ -9,7 +9,7 @@ const theme = createTheme({
     },
 
     accent: {
-      main: "#2563EB",
+      main: "#0946ca",
       surface: "#EFF6FF",
     },
 

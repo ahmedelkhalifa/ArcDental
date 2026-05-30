@@ -9,7 +9,7 @@ const FeaturesPaper = () => {
       <Box sx={{ px: {xs: 3, md: 10}, position: "relative", top: "-5vh", zIndex: 100 }}>
         <Paper sx={{ width: "100%", p: 2, borderRadius: 3 }} elevation={5}>
           <Grid container>
-            <Grid size={{ xs: 12, lg: 3 }}>
+            <Grid size={{ xs: 12, md: 6, lg: 3 }}>
               <FeaturesCard
                 icon={<Medication sx={{fontSize: {xs: "24px", md: "36px"}}} />}
                 title="Expert Dentists"
@@ -17,7 +17,7 @@ const FeaturesPaper = () => {
                 border="active"
               />
             </Grid>
-            <Grid size={{ xs: 12, lg: 3 }}>
+            <Grid size={{ xs: 12, md: 6, lg: 3 }}>
               <FeaturesCard
                 icon={<Computer sx={{fontSize: {xs: "24px", md: "36px"}}} />}
                 title="Digital Technology"
@@ -25,7 +25,7 @@ const FeaturesPaper = () => {
                 border="active"
               />
             </Grid>
-            <Grid size={{ xs: 12, lg: 3 }}>
+            <Grid size={{ xs: 12, md: 6, lg: 3 }}>
               <FeaturesCard
                 icon={<VerifiedUserOutlined sx={{fontSize: {xs: "24px", md: "36px"}}} />}
                 title="sterile Environment"
@@ -33,7 +33,7 @@ const FeaturesPaper = () => {
                 border="active"
               />
             </Grid>
-            <Grid size={{ xs: 12, lg: 3 }}>
+            <Grid size={{ xs: 12, md: 6, lg: 3 }}>
               <FeaturesCard
                 icon={<GradeOutlined sx={{fontSize: {xs: "24px", md: "36px"}}} />}
                 title="Patient Satisfaction"
