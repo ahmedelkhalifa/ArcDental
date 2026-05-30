@@ -13,7 +13,7 @@ const Home = () => {
     {/* hero */}
       <Box sx={{ display: "flex", height:{xs: "fit-content", lg:"100vh"}, flexDirection: "column" }}>
         <Nav active="home" />
-        <Box sx={{ flex: 3, height: "100%", width: "100%" }}>
+        <Box sx={{ flex: 3, height: "100%", width: "100%" }} id="home">
           <Hero
             top="ARC DENTAL . MODERN DENTAL CLINIC"
             text="Healthy Smiles, Modern Treatments"
@@ -26,7 +26,7 @@ const Home = () => {
           <FeaturesCard />
         </Box>
       </Box>
-      <Box sx={{py: "100px"}}>
+      <Box sx={{py: "100px"}} id="services">
         <Services />
       </Box>
       <Footer/>
