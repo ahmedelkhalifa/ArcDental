@@ -1,6 +1,5 @@
 import { Box, Button, Card, Typography } from "@mui/material";
 import React from "react";
-import img from "../assets/heroImg.png";
 import { CalendarMonthOutlined, East } from "@mui/icons-material";
 
 const ServiceCard = (props) => {
@@ -9,7 +8,7 @@ const ServiceCard = (props) => {
       <Card
         sx={{
           width: "100%",
-        //   height: "100%",
+          height: "100%",
           borderRadius: 2,
           display: "flex",
           flexDirection: "column",
@@ -20,7 +19,8 @@ const ServiceCard = (props) => {
         >
           <Box
             component={"img"}
-            src={img}
+            src={props.img}
+            loading="lazy"
             sx={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
         </Box>
@@ -47,14 +47,14 @@ const ServiceCard = (props) => {
                 color: "primary.main",
               }}
             >
-              <CalendarMonthOutlined fontSize="small" />
+              {props.icon}
             </Box>
             <Box>
               <Typography
                 variant="body1"
                 sx={{ color: "text.primary", fontSize: 16, fontWeight: 600 }}
               >
-                General Dentistry
+                {props.title}
               </Typography>
               <Typography
                 variant="body1"
@@ -64,8 +64,7 @@ const ServiceCard = (props) => {
                   fontWeight: 500,
                 }}
               >
-                Routine check-ups, cleaning, and preventive care to maintain
-                your oral health.
+                {props.desc}
               </Typography>
             </Box>
           </Box>
