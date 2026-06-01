@@ -63,26 +63,66 @@ const Nav = (props) => {
             href="#services"
             variant="body1"
             sx={{
-              color:
-                props.active === "services" ? "primary.main" : "text.primary",
+              color: props.active === "services" ? "primary.main" : "text.primary",
+              fontWeight: props.active === "services" ? 600 : 400,
+              position: "relative",
+              "&::after": {
+                content: '""',
+                display: props.active === "services" ? "block" : "none",
+                width: "100%",
+                height: "2px",
+                bgcolor: "primary.main",
+                position: "absolute",
+                left: 0,
+                bottom: "-10px",
+              },
               textDecoration: "none",
             }}
           >
             Services
           </Typography>
           <Typography
+            component={"a"}
+            href="#services"
             variant="body1"
             sx={{
               color: props.active === "about" ? "primary.main" : "text.primary",
+              fontWeight: props.active === "about" ? 600 : 400,
+              position: "relative",
+              "&::after": {
+                content: '""',
+                display: props.active === "about" ? "block" : "none",
+                width: "100%",
+                height: "2px",
+                bgcolor: "primary.main",
+                position: "absolute",
+                left: 0,
+                bottom: "-10px",
+              },
+              textDecoration: "none",
             }}
           >
             About
           </Typography>
           <Typography
+            component={"a"}
+            href="#services"
             variant="body1"
             sx={{
-              color:
-                props.active === "contact" ? "primary.main" : "text.primary",
+              color: props.active === "contact" ? "primary.main" : "text.primary",
+              fontWeight: props.active === "contact" ? 600 : 400,
+              position: "relative",
+              "&::after": {
+                content: '""',
+                display: props.active === "contact" ? "block" : "none",
+                width: "100%",
+                height: "2px",
+                bgcolor: "primary.main",
+                position: "absolute",
+                left: 0,
+                bottom: "-10px",
+              },
+              textDecoration: "none",
             }}
           >
             Contact

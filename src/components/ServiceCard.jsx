@@ -1,8 +1,10 @@
 import { Box, Button, Card, Typography } from "@mui/material";
 import React from "react";
 import { CalendarMonthOutlined, East } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
 
 const ServiceCard = (props) => {
+  const navigate = useNavigate();
   return (
     <>
       <Card
@@ -12,6 +14,12 @@ const ServiceCard = (props) => {
           borderRadius: 2,
           display: "flex",
           flexDirection: "column",
+          cursor: "pointer",
+          transition: "all 0.2s",
+          "&:hover": {
+            transform: "translateY(-5px)",
+            boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.2)",
+          },
         }}
       >
         <Box
@@ -76,6 +84,7 @@ const ServiceCard = (props) => {
               p: 0,
               fontSize: 14,
             }}
+            onClick={() => navigate(`/services/${props.id}`)}
           >
             Learn more
           </Button>
