@@ -11,6 +11,8 @@ import rootCanalImg from "../assets/services/service5.webp";
 import periodontalImg from "../assets/services/service6.webp";
 import oralSurgeryImg from "../assets/services/service7.webp";
 import digitalImg from "../assets/services/service8.webp";
+import singleTooth from "../assets/services/dentalImplant/single.webp";
+import multipleTooth from "../assets/services/dentalImplant/multiple.webp";
 import { FaTooth } from "react-icons/fa";
 import { GiAncientScrew } from "react-icons/gi";
 import { LiaTeethOpenSolid } from "react-icons/lia";
@@ -43,6 +45,30 @@ export const services = [
       sub2: "oral health and keep your smile shining.",
       image: generalDentistry,
       processTitle: "Our General Dentistry Services",
+      faq: [
+        {
+          question:
+            "How often should I visit the dentist for general check-ups?",
+          answer:
+            "It is generally recommended to visit the dentist every six months for routine check-ups and cleanings. However, your dentist may recommend more frequent visits based on your individual oral health needs.",
+        },
+        {
+          question: "What services are included in general dentistry?",
+          answer:
+            "General dentistry includes a wide range of services such as dental exams, cleanings, fillings, preventive care, oral cancer screenings, and early detection of dental issues.",
+        },
+        {
+          question:
+            "How can I maintain good oral health between dental visits?",
+          answer:
+            "Maintaining good oral health involves regular brushing and flossing, a balanced diet, avoiding tobacco products, and scheduling regular dental check-ups for preventive care.",
+        },
+        {
+          question: "Is general dentistry suitable for children?",
+          answer:
+            "Yes, general dentistry is suitable for patients of all ages, including children. Pediatric dental care focuses on the unique needs of children's oral health, providing preventive care and early treatment to ensure healthy smiles as they grow.",
+        },
+      ],
     },
     processSteps: [
       {
@@ -127,18 +153,149 @@ export const services = [
       sub2: "smile, confidence and oral function.",
       image: generalDentistry,
       processTitle: "The Dental Implant Process",
+      beforeAfter: [
+        {
+          id: 1,
+          image: singleTooth,
+          title: "Single Tooth Implant",
+          description:
+            "Replacing a single missing tooth with a dental implant and crown for a natural look.",
+        },
+        {
+          id: 2,
+          image: multipleTooth,
+          title: "Multiple Teeth Implants",
+          description:
+            "Replacing multiple missing teeth with a dental implant and crown for a natural look.",
+        },
+      ],
+      faq: [
+        {
+          question: "How long do dental implants last?",
+          answer:
+            "With proper care, dental implants can last a lifetime. Regular dental check-ups and good oral hygiene are essential to maintain their longevity.",
+        },
+        {
+          question: "Is the dental implant procedure painful?",
+          answer:
+            "The procedure is typically performed under local anesthesia, so you should not feel pain during the surgery. Some discomfort and swelling may occur afterward, but it can be managed with prescribed pain medication.",
+        },
+        {
+          question: "Am I a candidate for dental implants?",
+          answer:
+            "Most people with good overall health and sufficient jawbone density are candidates for dental implants. A thorough evaluation by our dental team will determine if implants are the right option for you.",
+        },
+        {
+          question: "How much do dental implants cost?",
+          answer:
+            "The cost of dental implants varies depending on factors such as the number of implants needed, the complexity of the procedure, and the geographic location. We offer competitive pricing and financing options to make treatment accessible.",
+        },
+      ],
     },
   },
 
   {
     id: 3,
+    top: "ARC DENTAL . MODERN DENTAL CLINIC",
     title: "Orthodontics",
     desc: "Straighten your teeth with modern braces and clear aligner treatments.",
     image: orthodontics,
     icon: <LiaTeethOpenSolid fontSize={24} />,
+    processSteps: [
+      {
+        number: "1",
+        title: "Initial Consultation",
+        description:
+          "We evaluate your teeth and bite to determine the best orthodontic treatment plan for you.",
+        icon: <CalendarMonthOutlined fontSize={"large"} />,
+      },
+      {
+        number: "2",
+        title: "Treatment Planning",
+        description:
+          "We create a personalized treatment plan, including the type of braces or aligners that best suit your needs.",
+        icon: <TbContract fontSize={36} />,
+      },
+      {
+        number: "3",
+        title: "Appliance Placement",
+        description:
+          "We carefully place your braces or provide you with your custom clear aligners to start your orthodontic journey.",
+        icon: <LiaTeethOpenSolid fontSize={36} />,
+      },
+      {
+        number: "4",
+        title: "Regular Adjustments",
+        description:
+          "We schedule regular appointments to adjust your braces or provide new sets of aligners to ensure your treatment progresses as planned.",
+        icon: <CalendarMonthOutlined fontSize={"large"} />,
+      },
+      {
+        number: "5",
+        title: "Retention Phase",
+        description:
+          "After your teeth are straightened, we provide retainers to maintain your new smile and prevent relapse.",
+        icon: <AutoAwesomeOutlined fontSize={"large"} />,
+      },
+    ],
+    page: {
+      title: "What Is Orthodontics",
+      description:
+        "Orthodontics is a specialized branch of dentistry focused on diagnosing, preventing, and treating dental and facial irregularities. It involves the use of braces, clear aligners, and other appliances to straighten teeth, correct bite issues, and improve overall oral function. Orthodontic treatment not only enhances the appearance of your smile but also promotes better oral health by making it easier to clean your teeth and reducing the risk of dental problems.",
+      bullets: [
+        "Straightens teeth and corrects bite issues.",
+        "Improves oral function and speech.",
+        "Enhances appearance and boosts confidence.",
+        "Promotes better oral hygiene and health.",
+      ],
+      sub1: "Effective orthodontic solutions designed to straighten your",
+      sub2: "teeth, correct bite issues, and enhance your smile.",
+      image: orthodontics,
+      processTitle: "The Orthodontic Treatment Process",
+      beforeAfter: [
+        {
+          id: 1,
+          image: singleTooth,
+          title: "Orthodontic Treatment",
+          description:
+            "Straightening a single crooked tooth with braces or clear aligners for a natural look.",
+        },
+        {
+          id: 2,
+          image: multipleTooth,
+          title: "Multiple Teeth Straightening",
+          description:
+            "Correcting misaligned teeth with braces or clear aligners for a natural look.",
+        },
+      ],
+      faq: [
+        {
+          question: "How long do dental implants last?",
+          answer:
+            "With proper care, dental implants can last a lifetime. Regular dental check-ups and good oral hygiene are essential to maintain their longevity.",
+        },
+        {
+          question: "Is the dental implant procedure painful?",
+          answer:
+            "The procedure is typically performed under local anesthesia, so you should not feel pain during the surgery. Some discomfort and swelling may occur afterward, but it can be managed with prescribed pain medication.",
+        },
+        {
+          question: "Am I a candidate for dental implants?",
+          answer:
+            "Most people with good overall health and sufficient jawbone density are candidates for dental implants. A thorough evaluation by our dental team will determine if implants are the right option for you.",
+        },
+        {
+          question: "How much do dental implants cost?",
+          answer:
+            "The cost of dental implants varies depending on factors such as the number of implants needed, the complexity of the procedure, and the geographic location. We offer competitive pricing and financing options to make treatment accessible.",
+        },
+      ],
+    },
   },
+
   {
     id: 4,
+    top: "ARC DENTAL . MODERN DENTAL CLINIC",
     title: "Cosmetic Dentistry",
     desc: "Enhance your smile with whitening, veneers, and aesthetic treatments",
     image: cosmeticDentistryImg,
@@ -146,6 +303,7 @@ export const services = [
   },
   {
     id: 5,
+    top: "ARC DENTAL . MODERN DENTAL CLINIC",
     title: "Root Canal Treatment",
     desc: "Relieve pain and save your natural teeth with advanced root canal therapy.",
     image: rootCanalImg,
@@ -153,6 +311,7 @@ export const services = [
   },
   {
     id: 6,
+    top: "ARC DENTAL . MODERN DENTAL CLINIC",
     title: "Periodontal Care",
     desc: "Gum disease treatment and maintenance for healthy gums and strong teeth.",
     image: periodontalImg,
@@ -160,6 +319,7 @@ export const services = [
   },
   {
     id: 7,
+    top: "ARC DENTAL . MODERN DENTAL CLINIC",
     title: "Oral Surgery",
     desc: "Safe and comfortable surgical solutions, including widsom teeth extraction.",
     image: oralSurgeryImg,
@@ -167,6 +327,7 @@ export const services = [
   },
   {
     id: 8,
+    top: "ARC DENTAL . MODERN DENTAL CLINIC",
     title: "Digital Dentistry",
     desc: "Advanced digital technology for percise diagnosis and efficient treatment.",
     image: digitalImg,

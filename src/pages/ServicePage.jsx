@@ -14,11 +14,15 @@ import { TbContract } from "react-icons/tb";
 import { RiQrScan2Line } from "react-icons/ri";
 import { useNavigate, useParams } from "react-router-dom";
 import { services } from "../data/services.jsx";
+import BeforeAfterCard from "../components/BeforeAfterCard.jsx";
+import WhyUs from "../components/WhyUs.jsx";
+import FAQ from "../components/FAQ.jsx";
+import CtaBar from "../components/CtaBar.jsx";
 
 const ServicePage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const service = services.find(s => s.id === Number(id));
+  const service = services.find((s) => s.id === Number(id));
 
   // handle invalid id
   if (!service) {
@@ -82,6 +86,36 @@ const ServicePage = () => {
               </Grid>
             ))}
           </Grid>
+          <Box sx={{ mt: 5 }}>
+            {service.page?.beforeAfter && (
+              <Typography
+                variant="h1"
+                sx={{ fontSize: "36px", textAlign: "center" }}
+              >
+                Before & After
+              </Typography>
+            )}
+            <Grid container spacing={4} sx={{ mt: 3 }}>
+              {service.page?.beforeAfter?.map((item) => (
+                <Grid size={{ xs: 12, md: 6 }} key={item.id}>
+                  <BeforeAfterCard
+                    title={item.title}
+                    image={item.image}
+                    description={item.description}
+                  />
+                </Grid>
+              ))}
+            </Grid>
+          </Box>
+          <Box sx={{ mt: 5 }}>
+            <WhyUs />
+          </Box>
+          {service.page?.faq && (
+            <Box sx={{ mt: 5 }}>
+              <FAQ faqItems={service.page?.faq} />
+            </Box>
+          )}
+          <CtaBar />
         </Container>
         <Footer />
       </Box>
